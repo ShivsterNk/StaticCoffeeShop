@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Shiva's Koffee Spot</title>
+		<link rel="stylesheet" href="assets/coffeestyle.css">
+    </head>
+        
+    <body>   
+         <nav class="navbar">
+			<div class="navdiv">
+				<div class="logo">Shiva's Koffee Spot</div>
+					<ul class="nav-menu">
+						<li class="nav-item">
+							<a href="homepage.html" class="nav-link">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="menupage.html" class="nav-link">Menu</a>
+						</li>
+						<li class="nav-item">
+							<a href="contact.html" class="nav-link">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a href="projectinfo.html" class="nav-link">Project Info</a>
+						</li>
+					</ul>
+					<div class="hamburger">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+			</div>
+		</nav>
+
+        <h1>Welcome to Shiva's Koffee Spot!</h1>
+        <h2>Step on to grab your brewful beverages and pounding pastries!</h2>
+
+        <main>
+            <section class="featured">                
+                <div class="featured-container"></div>
+            </section>
+
+            <section id="aboutsection">
+                <div class="row" style="background-color: rgb(250 235 215 / 50%);" >
+					<div class="column">
+						<h1>Want a Nice Coffee or Good Bite?</h1>
+                        <h3>Cozy coffee, pounding pastries</h3>
+                        <h3>Chill at Shiva's Koffee Spot</h3>
+                        <h3>Sit down, relax, grab a drink or bite</h3>
+                        <h3>Studying or relaxing, enjoy your stop here!</h3>
+					</div>
+					<div class="column">
+						<img src="assets/Images/coffeetable.jpg" alt="Coffee Table" class="about-pic">
+					</div>
+				</div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Shiva's Koffee Spot. All rights reserved. </p>
+        </footer>         
+
+        <script src="coffeescript.js"></script>
+        <script>
+                const featured = [
+                    {name: "Oreo Iced Coffee", price: 3.50, image: "oreoicecof.jpg"},
+                    {name: "Matcha Latte", price: 3.75, image: "matchalattes.jpg"},
+                    {name: "Peppermint Hot Chocolate", price: 3.00, image: "pepperhot.jpg"}
+                ];
+
+                const container = document.querySelector(".featured-container");
+
+                featured.forEach(coffee => {
+                    container.innerHTML += `
+                        <div class="item">
+                            <img src="assets/Images/${coffee.image}" alt="${coffee.name}" width="160px">
+                            <h3>${coffee.name}</h3>
+                            <p>$${coffee.price.toFixed(2)}</p>
+                        </div>
+                    `;
+                });
+        </script>    
+        
+    </body>
+</html>
