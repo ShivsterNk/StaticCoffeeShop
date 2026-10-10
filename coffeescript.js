@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
             navMenu.classList.toggle("active");
 
             if (navMenu.classList.contains("active")){
-                document.getElementById("menuButton").classList.add("hidden");
+                document.getElementById("menubtn").classList.add("hidden");
             }
             else {
-                document.getElementById("menuButton").classList.remove("hidden");
+                document.getElementById("menubtn").classList.remove("hidden");
             }
         });
     }
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /* FULLSCREEN IMAGERY */
-const images = document.querySelectorAll('.about-pic');
+const images = document.querySelectorAll('.screenshot-full');
 const fullscreenContainer = document.getElementById('fullscreen-container');
 const fullscreenImage = document.getElementById('fullscreen-image');
 const exitButton = document.getElementById('exit-button');
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Error: Elements not found!');
     }
 
-    if(!exitbutton || !fullscreenContainer) return;
+    if(!exitButton || !fullscreenContainer) return;
 
     exitButton.addEventListener('click', function() {
         fullscreenContainer.style.display = 'none';
